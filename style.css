@@ -1,0 +1,63 @@
+/* Estilo body */
+body {
+  background-color: #F8F9FD;
+  text-align: center;
+}
+
+/* Elementos do li */
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* Estivlo do card */
+.card {
+  background-color: #FFF;
+  margin-right: 10px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+/* Estilo da imagem do card */
+.card-img {
+  border-radius: 50%;
+}
+
+/* Estilo do botão de deletar */
+.button-delete {
+  background-color: red;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+/* Estilo do botão carregar */
+.button {
+  background-color: #3E57DB;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+/* Estilo do input */
+.input {
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Estilo da Mensagem */
+.msg {
+  font-size: 16px;
+  color: red;
+  margin-top: 25px;
+  font-weight: bold;
+}

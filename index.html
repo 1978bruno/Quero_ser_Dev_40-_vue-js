@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda de Contato</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Agenda de Contatos</h1>
+    <input class="input" type="text" v-model="searchtext" placeholder="Entre com um nome">
+    <button class="button" v-on:click="changeData()">Trocar dados</button>  
+    <button class="button" v-on:click="getData()">Carregar dados</button><br>
+
+    
+<!--    <span>{{searchtext}}</span>-->
+    <div class="msg" v-if="listresult.length <= 0">
+      Nenhum contato encontrado!
+    </div>
+
+   <!--  <address>
+     <img src="{{ picture }}" alt="{{ firstname }}">
+      <img v-bind:src="picture" v-bind:alt="firstname"> <br>
+      <strong>{{ firstname }} {{ lastname }}</strong> <br>
+      Email: {{ email }}<br>
+      Cidade: {{ city }}<br>
+    </address> -->
+
+    <ul>
+      <li v-for="item, index in listresult">
+        <div class="card">
+          <address>
+            <img class="card-img" v-bind:src="item.picture" v-bind:alt="firstname"> <br>
+            <strong>{{ item.firstname }} {{ item.lastname }}</strong><br>
+            Email: {{ item.email }}<br>
+            Cidade: {{ item.city }}<br>
+          </address>
+        </div>
+        <button class="button-delete" v-on:click="removecontact(index)">Excluir</button><br>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
